@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		E87D2CA6224F7A2A001BA373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87D2CA5224F7A2A001BA373 /* AppDelegate.swift */; };
-		E87D2CA8224F7A2A001BA373 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87D2CA7224F7A2A001BA373 /* ViewController.swift */; };
 		E87D2CAB224F7A2A001BA373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87D2CA9224F7A2A001BA373 /* Main.storyboard */; };
 		E87D2CAE224F7A2A001BA373 /* MusicFun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E87D2CAC224F7A2A001BA373 /* MusicFun.xcdatamodeld */; };
 		E87D2CB0224F7A2C001BA373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E87D2CAF224F7A2C001BA373 /* Assets.xcassets */; };
 		E87D2CB3224F7A2C001BA373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87D2CB1224F7A2C001BA373 /* LaunchScreen.storyboard */; };
 		E87D2CBE224F7A2C001BA373 /* MusicFunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87D2CBD224F7A2C001BA373 /* MusicFunTests.swift */; };
 		E87D2CC9224F7A2C001BA373 /* MusicFunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87D2CC8224F7A2C001BA373 /* MusicFunUITests.swift */; };
+		E87D2CDA224F81E9001BA373 /* LocalSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87D2CD9224F81E9001BA373 /* LocalSongsViewController.swift */; };
+		E87D2CDC224F8206001BA373 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87D2CDB224F8206001BA373 /* SongTableViewCell.swift */; };
+		E87D2CDF224F8484001BA373 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = E87D2CDE224F8484001BA373 /* default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,6 @@
 /* Begin PBXFileReference section */
 		E87D2CA2224F7A2A001BA373 /* MusicFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87D2CA5224F7A2A001BA373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E87D2CA7224F7A2A001BA373 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E87D2CAA224F7A2A001BA373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E87D2CAD224F7A2A001BA373 /* MusicFun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MusicFun.xcdatamodel; sourceTree = "<group>"; };
 		E87D2CAF224F7A2C001BA373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		E87D2CC4224F7A2C001BA373 /* MusicFunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicFunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87D2CC8224F7A2C001BA373 /* MusicFunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicFunUITests.swift; sourceTree = "<group>"; };
 		E87D2CCA224F7A2C001BA373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E87D2CD9224F81E9001BA373 /* LocalSongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSongsViewController.swift; sourceTree = "<group>"; };
+		E87D2CDB224F8206001BA373 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		E87D2CDE224F8484001BA373 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +103,10 @@
 		E87D2CA4224F7A2A001BA373 /* MusicFun */ = {
 			isa = PBXGroup;
 			children = (
+				E87D2CDD224F83FD001BA373 /* Resources */,
+				E87D2CD7224F818C001BA373 /* Cells */,
+				E87D2CD6224F817F001BA373 /* Controllers */,
 				E87D2CA5224F7A2A001BA373 /* AppDelegate.swift */,
-				E87D2CA7224F7A2A001BA373 /* ViewController.swift */,
 				E87D2CA9224F7A2A001BA373 /* Main.storyboard */,
 				E87D2CAF224F7A2C001BA373 /* Assets.xcassets */,
 				E87D2CB1224F7A2C001BA373 /* LaunchScreen.storyboard */,
@@ -126,6 +132,30 @@
 				E87D2CCA224F7A2C001BA373 /* Info.plist */,
 			);
 			path = MusicFunUITests;
+			sourceTree = "<group>";
+		};
+		E87D2CD6224F817F001BA373 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E87D2CD9224F81E9001BA373 /* LocalSongsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E87D2CD7224F818C001BA373 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E87D2CDB224F8206001BA373 /* SongTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E87D2CDD224F83FD001BA373 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E87D2CDE224F8484001BA373 /* default.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +265,7 @@
 				E87D2CB3224F7A2C001BA373 /* LaunchScreen.storyboard in Resources */,
 				E87D2CB0224F7A2C001BA373 /* Assets.xcassets in Resources */,
 				E87D2CAB224F7A2A001BA373 /* Main.storyboard in Resources */,
+				E87D2CDF224F8484001BA373 /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +291,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E87D2CAE224F7A2A001BA373 /* MusicFun.xcdatamodeld in Sources */,
-				E87D2CA8224F7A2A001BA373 /* ViewController.swift in Sources */,
+				E87D2CDA224F81E9001BA373 /* LocalSongsViewController.swift in Sources */,
+				E87D2CDC224F8206001BA373 /* SongTableViewCell.swift in Sources */,
 				E87D2CA6224F7A2A001BA373 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
